@@ -1,0 +1,937 @@
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #222;
+    color: #ffffff;
+    padding-bottom: 50px;
+}
+
+
+@font-face {
+  font-family: 'HerryPott'; /* This is the name you will use to refer to the font */
+  src: url(fonts/scary-notes-font/ScaryNotesPersonalUse-ZVAxl.otf) format('truetype'); /* Correct file path */
+}
+
+
+
+
+
+
+@font-face {
+    font-family: 'HarryPotter'; /* This is the name you will use to refer to the font */
+    src: url(fonts/harry-p-font/harrypotter.ttf) format('truetype'); /* Correct file path */
+}
+
+header {
+    display: flex;;
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; 
+}
+
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .container p{
+    font-size:larger
+  }
+  .nav {
+    background: linear-gradient(to right, #1a151eec, #2d293cfc, #0d0323ec, #42664dec, #000000ec);
+    position: fixed;
+    text-align: center;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000; 
+  }
+  
+
+  .nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 7px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .nav.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav.active a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: double;
+  }
+  
+  .nav.active .container {
+    padding: 7px 0;
+  }
+  
+  .nav a.current,
+  .nav a:hover {
+    color: #faf9f8;
+    font-weight: bolder;
+  }
+  
+  /*Blogheader*/
+     
+  .contain {
+    
+    position: relative;
+    height: 10vh;
+    background: url('hogwarts.jpg') no-repeat center center/cover;
+}
+
+.blogHead {
+    position: relative;
+    background-image: url('posters/Bhead.png');
+    margin-top: 6%;
+    max-width: 1700px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blogHead p {
+    font-family: 'HarryPotter';
+    color: #dfd4a3;
+    text-align: center;
+    font-size: 75px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Floating Candle Styles */
+.candles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.candle {
+    position: absolute;
+    width: 10px;
+    height: 40px;
+    background: rgb(255, 253, 242);
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.8);
+    animation: float 5s infinite ease-in-out;
+  z-index: 5; /* Check visibility */
+   
+    
+}
+
+.candle::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 3px;
+    width: 4px;
+    height: 10px;
+    background: orange;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.8);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.candles .candle:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-duration: 6s;
+}
+
+.candles .candle:nth-child(2) {
+    top: 85%;
+    left: 50%;
+    animation-duration: 4s;
+}
+
+.candles .candle:nth-child(3) {
+    top: 20%;
+    left: 80%;
+    animation-duration: 5s;
+}
+
+.candles .candle:nth-child(4) {
+    top: 50%;
+    left: 10%;
+    animation-duration: 6s;
+}
+
+.candles .candle:nth-child(5) {
+    top: 60%;
+    left: 70%;
+    animation-duration: 5.5s;
+}
+
+.candles .candle:nth-child(6) {
+    top: 75%;
+    left: 40%;
+    animation-duration: 4.5s;
+}
+
+.candles .candle:nth-child(7) {
+    top: 85%;
+    left: 90%;
+    animation-duration: 6s;
+}
+
+.blogHead .candles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+  /*movie header*/
+
+.movie-header {
+    display: flex;
+    justify-content: flex-start;
+    overflow: visible;
+    padding: 10px;
+    max-width: 1800px;
+    margin: 10px auto 10px auto;
+    height: 500px;
+    background: url(posters/HP-F1-philosophers-stone-ron-harry-hermione-great-hall-chess-christmas-decorated-web-landscape.jpg) no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.movie-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 20%, rgba(0, 0, 0, 0) 100%);
+}
+
+.movie-header .details {
+    position: relative;
+    top: 28%;
+    left: 0%;
+    z-index: 2;
+   
+    padding-left: 2%;
+}
+
+
+/* Apply the font to a specific element or class */
+.specialHead {
+    font-family: 'HarryPotter';/* Apply HarryPotter font *//* Adjust the size as needed */
+    color: #fffbfb; /* Optional: Change text color */
+    
+}
+
+.speciAl{
+  font-family: 'HerryPott';
+  color: #9c1a1a;
+  font-size: 50px;
+}
+
+
+
+.movie-header .details {
+  overflow: visible;
+}
+
+
+.movie-header .details h1 {
+  width: 100%;
+  font-size: 82px;  /* Adjusted font size */
+  margin-top: 10px;  /* Reduced margin */
+  margin-bottom: 10px;
+  color: #facd17;
+  z-index: 10;  /* Ensure it stays on top */
+}
+
+.movie-header .details p {
+    font-size: 13px;
+}
+
+
+/*genre*/
+.genre-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    gap: 10px; /* Space between genres */
+    margin-top: 20px; /* Space between description and genres */
+    padding: 10px 0;
+    scrollbar-width: none; /* For Firefox: hides the scrollbar */
+}
+
+.genre-container::-webkit-scrollbar {
+    display: none; /* Hides scrollbar for Chrome, Edge, etc. */
+}
+
+/* Individual genre styling */
+.genre {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    padding: 8px 16px;
+    border-radius: 20px; /* Rounded edges */
+    font-size: 14px;
+    white-space: nowrap; /* Ensures text stays on one line */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.genre:hover {
+    background-color: #facd17; /* Highlight color */
+    color: black; /* Text color on hover */
+}
+ 
+.genre.selected {
+    background-color: #facd17;
+    color: black;
+    font-weight: bold;
+}
+
+/*Rates*/
+
+
+.rating-section div {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between elements inside each rating block */
+}
+
+.rating-section strong {
+    font-size: 1.2em;
+}
+
+.rating-section p {
+    font-size: 0.9em;
+    color: #bbb;
+    margin: 0;
+}
+
+.rating-section .icon img {
+    width: 20px; /* Adjust icon size */
+    height: 20px;
+}
+
+.user-rating strong {
+    color: #3a80f6; /* Blue color for Rate text */
+}
+
+.popularity strong {
+    color: #4caf50; /* Green color for popularity */
+}
+
+  
+/*ratingsimdb*/
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+   position: relative;
+   top: 10px;
+   right: 2px;
+    color: #fff; /* Adjust color for your theme */
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.rating-section div {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.icon {
+    font-size: 20px;
+}
+
+.rating-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-style: initial;
+}
+
+.rating-details p {
+    margin: 0;
+    font-size: 13px;
+}
+
+.rating-details p strong {
+    font-size: 15px;  
+}
+
+.your-rating{
+    color: #437fdb; /* Green color for your rating */
+}
+
+.rating-details a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.rating-details a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*infoSec*/
+.sec2 {
+  position: relative; /* Ensure relative positioning for snowflakes */
+  overflow: hidden; /* Prevent snowflakes from overflowing the section */
+
+}
+
+.sec2 h1{
+ margin-left: 10%;
+
+}
+
+.ghost {
+  position: absolute;
+  top: 0px;
+ left: 30px;
+  width: 100px;
+  animation: diagonal-move 5s linear infinite, float 3s ease-in-out infinite;
+}
+
+.ghoost {
+  position: absolute;
+  top: 0px;
+ left: 0px;
+  width: 350px;
+  animation: diagonal-move 9s linear infinite, float 9s ease-in-out infinite;
+
+  }
+
+
+.detailIn {
+    margin-top: 5px;
+    display: flex;
+    max-width: 1200px;
+    padding: 20px;
+  }
+  
+  
+  .left-section {
+    flex: 3; /* 75% of the width */
+    padding-right: 20px;
+  }
+  
+  .poster-wrapper {
+    display: flex;
+    align-items: start; /* Align the poster and info at the top */
+    gap: 20px;
+  }
+  
+  .poster {
+    width: 35%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.669);
+  }
+  
+  .info-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .poster-info .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .poster-info .tags span {
+    background-color: #444;
+    color: white;
+    padding: 5px 5px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  
+  .info h1 {
+    margin: 2px 0;
+    color: #7bbe82;
+  }
+  
+  .description {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  
+
+  
+  .right-section {
+    flex: 1; /* 25% of the width */
+    background: rgba(58, 57, 57, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    left: 15%;
+    padding: 2%;
+ 
+  }
+  
+  .right-section .partition {
+    margin-top: 39%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .right-section .partition p {
+    margin: 0;
+  }
+  
+  .right-section .partition strong {
+    color: #ffe083;
+  }
+  
+
+
+  /*snow*/
+  
+.snowflake-sec2 {
+  position: absolute;
+  top: -10px; /* Start slightly above the section */
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  animation: fall-sec2 linear infinite;
+  z-index: 10; /* Ensure snowflakes appear on top of content */
+}
+
+@keyframes fall-sec2 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(300px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/*storyinfo*//* Container for the spell */
+.spell-container {
+  position: absolute; /* Overlays the content */
+  top: 210%; /* Center vertically */
+  left: 20%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center alignment */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap; /* Wraps the letters */
+  z-index: 1000; /* Ensures it stays above other content */
+  pointer-events: none; /* Prevents blocking clicks on underlying content */
+}
+
+/* Style for each letter */
+.letter {
+  font-family: 'HarryPotter';/* Apply HarryPotter font *//* Adjust the size as needed */
+  font-size: 4rem;
+  color: #c6c5c1; /* Golden spell color */
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffd700, 0 0 30px #ffcc00;
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  transition: transform 3s ease-in-out; /* Smooth transition for the movement */
+}
+
+/*storylinecast*/
+.anime-section {
+  background-color: #2f2f2f;
+  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.anime-container {
+  display: flex;
+  gap: 20px;
+}
+
+.anime-image {
+  position: relative;
+  width: 300px;
+}
+
+.anime-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.watch-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #ff4081;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.anime-details {
+  flex: 1;
+}
+
+.anime-details h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.anime-meta .tag {
+  background: #444;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.anime-actions button {
+  background: #ff4081;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.anime-actions .add-to-list {
+  background: #555;
+}
+
+.anime-description {
+  margin-top: 15px;
+}
+
+.anime-description .read-more {
+  color: #ff4081;
+}
+
+.anime-info p {
+  margin: 5px 0;
+}
+
+.share-section {
+  margin-top: 20px;
+}
+
+.share-icons button {
+  background: #444;
+  color: white;
+  padding: 10px;
+  border: none;
+  margin-right: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*maininfo*/
+
+/* General Styling */
+.dastory, .cotent {
+  display: flex;
+ 
+  justify-content: center;
+}
+.dastory {
+  padding-left: 5%;
+  height: 89vh;
+  background: linear-gradient(to right, rgba(35, 15, 2, 0.8) 40%, rgba(0, 0, 0, 0) 100%);
+}
+.potraits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+.potrait img {
+  
+  position: relative;
+  top: 30%;
+  align-items: center;
+  width: 550px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 5px 3px 10px rgba(55, 4, 8, 0.5);
+}
+.text {
+  position: absolute;
+  top: 200%;
+  right: 4%;
+  width: 50%; /* Adjust width as per preference */
+  text-align: right;
+  line-height: 2; /* Increased line height for more spacing between lines */
+    
+}
+
+
+.text h1 {
+  font-size: 28px; /* Adjust heading size */
+}
+
+.text p {
+  font-size: 14px; /* Keep paragraph size compact */
+  text-align: left;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.button {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.hname{
+ font-size: 17px;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/*butttonwatchnow*/
+.details  {
+  position: absolute;
+  top: 275%;
+  left: 72px;
+  width: 50%; 
+   
+}
+
+.watch-now-btn {
+  display: inline-block;
+  background-color: #ce9700;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.watch-now-btn:hover {
+  background-color: #a77c07;
+}
+
+.add-now-btn {
+display: inline-block;
+background-color:  #892e21;
+color: #fff;
+
+padding: 10px 20px;
+font-size: 16px;
+border: none;
+border-radius: 20px;
+text-decoration: none;
+cursor: pointer;
+transition: background-color 0.3s ease;
+font-weight: bold
+
+}
+
+.add-now-btn:hover {
+background-color: rgb(116, 42, 29);
+}
+
+/*gallery*/
+.myBj{
+  height: 630px;
+  padding: px;;
+}
+
+.houses {
+  height: 510;
+  position: absolute;
+  left: 6%;
+}
+.vertical-text {
+  position: absolute;
+  top:300%;
+  right: 95%;
+  margin-left: 2%;
+  writing-mode: vertical-rl; /* Makes text vertical */
+  transform: rotate(180deg); /* Flips text to read top-to-bottom */
+  font-size: 50px;
+  color: rgb(114, 179, 179);
+  font-weight: bold;
+  font-family: 'HarryPotter';
+}
+
+.houses img{
+  height: 150px;
+  position: relative;
+    
+}
+
+.himg:hover img{
+  transform: scale(1.1);
+}
+.gallery-wrapper {
+  overflow-x: auto; /* Enables horizontal scrolling */
+  white-space: nowrap; /* Keeps all items in a single line */
+  padding: 10px; /* Padding to avoid scroll-bar overlap */
+  margin-left: 18%;
+
+}
+
+
+.gallery-wrapper h1{
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'HerryPott';
+  color: #38fae0;
+  }
+
+.gallery {
+  display: inline-flex; /* Ensures images are in a row */
+  gap: 15px; /* Space between images */
+
+}
+
+.gallery-item {
+  flex: 0 0 auto; /* Prevents shrinking */
+  width: 200px; /* Fixed width for items */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.gallery-item img {
+  width: 90%; /* Ensure images fit in their container */
+  height: 230px; /* Fixed height */
+  object-fit: cover; /* Maintain aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Optional Scrollbar Styling for Chrome/Edge */
+.gallery-wrapper::-webkit-scrollbar {
+
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.gallery-wrapper::-webkit-scrollbar-thumb {
+  background: #ffd700;
+  border-radius: 10px;
+}
+
+.gallery-wrapper::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+
+
+/*cast*/
+
+
+.cast-section {
+  text-align: left;
+  margin: 28px;
+  margin-left: 18%;
+}
+
+.cast-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'HerryPott';
+  color: #38fae0;
+}
+
+.cast-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.cast-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+  scrollbar-width: none; /* For Firefox */
+  
+}
+
+.cast-scroll::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Edge */
+}
+
+.cast-scroll::-webkit-scrollbar-track {
+  background: #060505;
+}
+
+
+.cast-item {
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.cast-item .as{
+  font-size: 12px;
+  color: #bf9999;
+  
+}
+
+.cast-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #070606;
+}
+
+.cast-item p {
+  margin-top: 6px;
+  font-size: 10px;
+  color: #d1d1d1;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
